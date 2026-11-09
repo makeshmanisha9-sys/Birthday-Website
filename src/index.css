@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+/* Custom Scrollbar for Luxury Aesthetics */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070508;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #5F1734 0%, #D4AF37 50%, #2A0B17 100%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #7E1F45 0%, #F3EACD 50%, #431024 100%);
+}
+
+/* Subtle Film Grain Overlay */
+.film-grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
+}
+
+/* Luxury Gold Text Gradient */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #FFF6D8 0%, #E5C158 35%, #D4AF37 60%, #AA7C11 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gold-subtle {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F3EACD 50%, #D4AF37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-burgundy-gold {
+  background: linear-gradient(135deg, #F3EACD 0%, #C4728A 50%, #E5C158 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glassmorphism Panels */
+.luxury-glass {
+  background: rgba(18, 15, 23, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.16);
+  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.75), 0 0 30px rgba(212, 175, 55, 0.05);
+}
+
+.luxury-glass-interactive {
+  background: rgba(22, 18, 28, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 30px rgba(212, 175, 55, 0.08);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.luxury-glass-interactive:hover {
+  border-color: rgba(212, 175, 55, 0.45);
+  box-shadow: 0 30px 60px -10px rgba(0, 0, 0, 0.9), 0 0 45px rgba(212, 175, 55, 0.18);
+  transform: translateY(-4px);
+}
+
+/* Gold border glow */
+.gold-glow-border {
+  position: relative;
+}
+.gold-glow-border::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.5), transparent 40%, rgba(95, 23, 52, 0.4));
+  border-radius: inherit;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Paper Parchment texture for Letter */
+.parchment-card {
+  background: linear-gradient(145deg, #1A151C 0%, #151118 100%);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  box-shadow: 
+    0 20px 50px rgba(0, 0, 0, 0.85),
+    inset 0 1px 1px rgba(255, 255, 255, 0.08),
+    inset 0 0 80px rgba(67, 16, 36, 0.15);
+}
+
+/* Polaroid Photo Card styling */
+.polaroid-frame {
+  background: linear-gradient(180deg, #FBF8F2 0%, #EFE8DA 100%);
+  box-shadow: 
+    0 15px 35px -5px rgba(0, 0, 0, 0.8),
+    0 5px 15px rgba(0, 0, 0, 0.5),
+    inset 0 0 10px rgba(0, 0, 0, 0.04);
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease;
+}
+
+.polaroid-frame:hover {
+  box-shadow: 
+    0 30px 60px -10px rgba(0, 0, 0, 0.95),
+    0 0 30px rgba(212, 175, 55, 0.35);
+}
+
+/* Ambient Radial Glows */
+.ambient-glow-burgundy {
+  background: radial-gradient(circle, rgba(103, 22, 47, 0.35) 0%, rgba(103, 22, 47, 0) 70%);
+}
+
+.ambient-glow-gold {
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.25) 0%, rgba(212, 175, 55, 0) 70%);
+}
